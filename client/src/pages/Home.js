@@ -5,6 +5,7 @@ import axios from 'axios';
 import { Image } from 'cloudinary-react';
 import QuoteComponent from '../components/QuoteComponent.js';
 import EndSequenceComponent from '../components/EndSequenceComponent.js';
+import HeroTextComponent from '../components/HeroTextComponent.js';
 
 export default function Home() {
 
@@ -19,7 +20,7 @@ export default function Home() {
      async function fetchImageIds() {
         try {
             const response = await axios.get('api/v1');
-            console.log('response data:  ', response.data)
+            // console.log('response data:  ', response.data)
             setImageIds(response.data)
         } catch (error) {
             console.error('error fetching imageIds data: ', error)
@@ -43,7 +44,10 @@ export default function Home() {
     }
 
     return (
-        <div className='home-main'>
+        <Container>
+            {/* <HeroTextComponent /> */}
+             <div className='home-main'>
+            
             <div className='gallery'>
 
                 {/* shows fixed final image */}
@@ -113,5 +117,7 @@ export default function Home() {
            
             </div>
         </div>
+        </Container>
+       
     );
 };
