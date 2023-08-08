@@ -6,7 +6,6 @@
   
   "private": true,
   
-  "proxy": "http://localhost:5000",
   
   "dependencies": {
   
@@ -128,5 +127,5 @@
   
   },
   
-  "forProductionLeaveJustTheWordProxyproxy": "https://blooming-beyond-59584.herokuapp.com/"
+  "proxy": ""
 }
