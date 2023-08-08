@@ -1,0 +1,47 @@
+/* rgb(238, 240, 240) */
+/* rgb(246, 246, 246) */
+* {
+    background-color: rgb(238, 240, 240);
+}
+.home-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.single-image {
+    margin-top: 145px;
+    padding: 25px;
+    border: 1px solid black;
+}
+
+/* Quote Container Styles */
+.quote-container {
+    margin-top: 55px;
+    text-align: center;
+}
+
+/* End Sequence Container Styles */
+.end-sequence-container {
+    margin-top: 275px;
+    text-align: center;
+}
+
+.link-style {
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+    text-decoration-color: black;
+}
