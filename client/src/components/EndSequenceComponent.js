@@ -13,7 +13,7 @@ const EndSequenceComponent = () => {
          <p>thank you</p>
       </Container>
      
-       
+       <p className='get-in-touch-p'>&#8595; pls get in touch &#8595;</p>
        <a 
        className='link-style'
        href="http://www.cbphotoworld.com"

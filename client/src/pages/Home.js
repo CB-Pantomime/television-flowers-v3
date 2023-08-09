@@ -2,10 +2,12 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import axios from 'axios';
+
+// components
 import { Image } from 'cloudinary-react';
-import QuoteComponent from '../components/QuoteComponent.js';
 import EndSequenceComponent from '../components/EndSequenceComponent.js';
-import HeroTextComponent from '../components/HeroTextComponent.js';
+import AboutComponent from '../components/AboutComponent.js';
+
 
 export default function Home() {
 
@@ -14,7 +16,8 @@ export default function Home() {
     const [showEndOfSeqLink, setShowEndOfSeqLink] = useState(false);
     const [imageIds, setImageIds] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [endOfArray, setEndOfArray] = useState(false)
+    const [endOfArray, setEndOfArray] = useState(false);
+    
 
     useEffect(() => {
      async function fetchImageIds() {
@@ -34,7 +37,8 @@ export default function Home() {
        if (currentIndex < imageIds.length - 1) {
         setCurrentIndex(currentIndex + 1);
       } else {
-        setEndOfArray(true)
+        setEndOfArray(true);
+        
         }
     }
 
@@ -45,12 +49,10 @@ export default function Home() {
 
     return (
         <Container>
-            {/* <HeroTextComponent /> */}
              <div className='home-main'>
-            
             <div className='gallery'>
 
-                {/* shows fixed final image */}
+                {/* shows fixed final image on conditions endOfArray is true AND showEndOfSeqLink is false*/}
                 {
                     endOfArray && !showEndOfSeqLink ? (
                         <Image
@@ -66,7 +68,7 @@ export default function Home() {
                     : <></>
                 }
 
-                {/* shows end of sequence link */}
+                {/* shows end of sequence link*/}
                 {
                     showEndOfSeqLink ? (
                         <EndSequenceComponent />
@@ -74,18 +76,9 @@ export default function Home() {
                     : <></>
                 }
 
-                {/* shows quote component at end of array */}
-                {
-                    endOfArray ? (
-                        //  <QuoteComponent />
-                        <></>
-                    )
-                    : <></>
-                }
-
-                {/* shows fixed landing image */}
-
               
+
+                {/* shows fixed landing image if showShuffledArray is not true */}
                 {
                   
                     showShuffledArray ? <></> 
@@ -102,7 +95,7 @@ export default function Home() {
                 
                 }
               
-                {/* steps through shuffled array from backend */}
+                {/* steps through shuffled array from backend on conditions showShuffledArray is true AND endOfArray is false (prevents two separate Image components rendered at same time)*/}
                 {
                     showShuffledArray && !endOfArray? 
                     (<Image
@@ -118,8 +111,15 @@ export default function Home() {
                     : <></>
                 }
 
-           
+                {/* shows about component on condition showEndOfSeqLink is not true */}
+                { 
+                    !showEndOfSeqLink ? 
+                    <AboutComponent />
+                    : <></>
+                }
+                
             </div>
+            
         </div>
         </Container>
        
