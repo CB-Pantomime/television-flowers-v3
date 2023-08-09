@@ -8,5 +8,6 @@ and final book waits to get sequenced, designed, and printed.
 
 Thanks for checking in! 
 
+Project: www.televisionflowers.com
 Photo books and zines: www.cbphotoworld.com
 
