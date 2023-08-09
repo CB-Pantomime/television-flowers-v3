@@ -39,7 +39,7 @@ const getFlowers = async (req, res) => {
         let shuffledIds = shuffleArray(publicId)
         // console.log('after shuffle - array of publicIds: ', shuffledIds);
         
-        const twelveShuffledIds = shuffledIds.slice(0, 14)
+        const twelveShuffledIds = shuffledIds.slice(0, 12)
         console.log('length of shuffledIds: ',twelveShuffledIds.length)
         res.send(twelveShuffledIds);
 

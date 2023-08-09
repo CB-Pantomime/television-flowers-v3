@@ -84,9 +84,12 @@ export default function Home() {
                 }
 
                 {/* shows fixed landing image */}
+
+              
                 {
+                  
                     showShuffledArray ? <></> 
-                    : ( <Image
+                    :( <Image
                         alt='flower on television'
                         className="single-image"
                         key={2298}
@@ -96,8 +99,9 @@ export default function Home() {
                         crop="scale"
                         onClick={() => setShowShuffledArray(true)}
                     />)
+                
                 }
-               
+              
                 {/* steps through shuffled array from backend */}
                 {
                     showShuffledArray && !endOfArray? 

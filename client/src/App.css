@@ -23,9 +23,19 @@
     /* border: 2px green; */
 }
 
+/* .wraps-image-component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px red;
+} */
+
 .single-image {
     margin-top: 145px;
     padding: 25px;
+    min-width: 250px;
+    min-height: 300px;
     border: 1px solid black;
 }
 
